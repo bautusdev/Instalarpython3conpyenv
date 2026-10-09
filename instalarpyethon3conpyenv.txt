@@ -1,0 +1,49 @@
+
+Instalar Python usando pyenv
+
+sudo apt install git curl make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl
+
+Clonar pyenv desde el repositorio oficial
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+
+
+Configurar pyenv en el entorno
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
+
+reiniciar el servicio
+
+source ~/.bashrc
+pyenv versions
+
+Listar versiones instaladas
+pyenv versions
+
+
+Instalar alguna version en especifica por ejemplo
+
+pyenv install 3.10.0
+pyenv install 3.12.13
+
+
+poner como defecto la version de python por ejemplo 
+
+pyenv global 3.10.0
+pyenv global 3.12.13
+
+
+instalar entorno virtual
+sudo apt install python3-venv
+
+
+Crear carpeta de trabajo
+mkdir TRABAJO
+cd TRABAJO
+
+crear entorno virtual 
+python -m venv env
+
+Instalar alguna dependencia en python ejemplo
+pip install flask
